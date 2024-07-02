@@ -1,0 +1,11 @@
+﻿@{
+    var users = ViewData["Users"] as IEnumerable<UserModel>;
+}
+
+<h1>Users</h1>
+<ul>
+    @foreach (var user in users)
+    {
+        <li>@user.Name (@user.Email)</li>
+    }
+</ul>
